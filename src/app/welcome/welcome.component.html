@@ -41,4 +41,11 @@
   </p>
 </section>
 
+<!--the goal of using this feature is to help us in rendering component or our views page conditionnaly
+like here we have the trigger interaction: this means that if you click on the placeholder "by placeholder i refer to that code inside of the @placeholder block" you will see the component render in your application
+the prefetch on hover means that if you hover your mouse on the placeholder the lazy load of the views will be trigger but you can only render the view if you click on the placeholder  -->
+@defer( on interaction; prefetch on hover) {
 <app-offer-preview />
+}@placeholder {
+<p class="fallback">we might have an offer...</p>
+}
